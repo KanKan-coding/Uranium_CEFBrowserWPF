@@ -28,7 +28,7 @@ namespace Uranium_CEFBrowserWPF
 
         private void ApplicationClick_Click(object sender, RoutedEventArgs e)
         {
-            
+            Browser.Load(Adress_Bar.Text);
         }
     }
 }
