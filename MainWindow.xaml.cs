@@ -15,28 +15,25 @@ using System.Windows.Shapes;
 
 namespace Uranium_CEFBrowserWPF
 {
+    
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        bool hasBeenClicked = false;
+
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
-     
-
-        private void OnKeyDownHandler(object sender, KeyEventArgs e)
+        public void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {
-            if (e.Key == Key.Enter)
-            {
-                Browser.Load(Adress_Bar.Text);
-            }
-
+            TextBox tb = (TextBox)sender;
+            tb.Text = string.Empty;
+            tb.GotFocus -= TextBox_GotFocus;
         }
-
-       
     }
 }

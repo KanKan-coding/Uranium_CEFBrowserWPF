@@ -8,15 +8,16 @@
             <ColumnDefinition Width="333*"/>
             <ColumnDefinition Width="175*"/>
         </Grid.ColumnDefinitions>
-        <ToolBarTray Background="DarkGray" Height="30" Width="1024" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="0,0,-8,0">
+        <ToolBarTray Background="DarkGray" Height="40" Width="1024" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="0,0,-8,0">
             <ToolBar Name="MyToolbar" Height="30" Margin="0,0,10,0">
-                <TextBox x:Name="Adress_Bar" Background="WhiteSmoke" BorderBrush="Black" BorderThickness="1" Text="Enter URL" TextAlignment="Center" Width="925" Height="20" Margin="60,0,0,1"/>
-
+                <TextBox x:Name="TextBar" Background="WhiteSmoke" BorderBrush="Black" BorderThickness="1" Text="Enter URL" TextAlignment="Center" Width="925" Height="20" Margin="60,0,0,1" GotFocus="TextBox_GotFocus"/>
             </ToolBar>
         </ToolBarTray>
-        <Menu x:Name="menu1" Height="20" Background="WhiteSmoke" BorderBrush="Black" BorderThickness="1" Margin="11,4,599,713">
-            <MenuItem Header="_···" Width="55" Height="18">
-                <MenuItem Header="_Open"/>
+        <Menu x:Name="menu1" Background="WhiteSmoke" BorderBrush="Black" BorderThickness="2" Margin="11,4,599,708">
+            <MenuItem Header="···" Width="50" Height="20">
+                <MenuItem Header="Dark Mode" IsCheckable="True"/>
+                <MenuItem Header="Bookmarks"/>
+                <MenuItem Header="History"/>
             </MenuItem>
         </Menu>
         <cefSharp:ChromiumWebBrowser x:Name="Browser" Grid.Row="0"
