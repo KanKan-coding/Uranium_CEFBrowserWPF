@@ -9,14 +9,21 @@
             <ColumnDefinition Width="175*"/>
         </Grid.ColumnDefinitions>
         <ToolBarTray Background="DarkGray" Height="30" Width="1024" VerticalAlignment="Top" Grid.ColumnSpan="2" Margin="0,0,-8,0">
-            <ToolBar Name="MyToolbar" Width="1024" Height="30" >
-                <Button x:Name="ApplicationClick" Background="WhiteSmoke" BorderBrush="Black" BorderThickness="1" Content="Apps" Width="60" Margin="0,0,0,1" VerticalAlignment="Bottom" Click="ApplicationClick_Click"/>
-                <TextBox x:Name="Adress_Bar" Background="WhiteSmoke" BorderBrush="Black" BorderThickness="1" Text="Enter URL" TextAlignment="Center" Width="925" />
+            <ToolBar Name="MyToolbar" Height="30" Margin="0,0,10,0">
+                <TextBox x:Name="Adress_Bar" Background="WhiteSmoke" BorderBrush="Black" BorderThickness="1" Text="Enter URL" TextAlignment="Center" Width="925" Height="20" Margin="60,0,0,1"/>
+
             </ToolBar>
         </ToolBarTray>
-
-
+        <Menu x:Name="menu1" Height="20" Background="WhiteSmoke" BorderBrush="Black" BorderThickness="1" Margin="11,4,599,713">
+            <MenuItem Header="_···" Width="55" Height="18">
+                <MenuItem Header="_Open"/>
+            </MenuItem>
+        </Menu>
         <cefSharp:ChromiumWebBrowser x:Name="Browser" Grid.Row="0"
-        Address="https://www.google.com" Margin="0,30,0,0" Grid.ColumnSpan="2" />
+        Address="https://www.google.com" Margin="-10,30,10,0" Grid.ColumnSpan="2" />
+
+
+
+
     </Grid>
 </Window>

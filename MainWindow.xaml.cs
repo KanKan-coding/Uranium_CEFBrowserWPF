@@ -26,9 +26,17 @@ namespace Uranium_CEFBrowserWPF
             InitializeComponent();
         }
 
-        private void ApplicationClick_Click(object sender, RoutedEventArgs e)
+     
+
+        private void OnKeyDownHandler(object sender, KeyEventArgs e)
         {
-            Browser.Load(Adress_Bar.Text);
+            if (e.Key == Key.Enter)
+            {
+                Browser.Load(Adress_Bar.Text);
+            }
+
         }
+
+       
     }
 }
