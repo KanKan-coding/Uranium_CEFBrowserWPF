@@ -21,7 +21,6 @@ namespace Uranium_CEFBrowserWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        bool hasBeenClicked = false;
 
 
         public MainWindow()
@@ -34,6 +33,21 @@ namespace Uranium_CEFBrowserWPF
             TextBox tb = (TextBox)sender;
             tb.Text = string.Empty;
             tb.GotFocus -= TextBox_GotFocus;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Browser.Load(TextBar.Text);
+        }
+
+        private void Tab2_Click(object sender, RoutedEventArgs e)
+        {
+            Browser.Load(TextBar.Text);
+        }
+
+        private void Load_Click(object sender, RoutedEventArgs e)
+        {
+            Browser.Load(TextBar.Text);
         }
     }
 }
